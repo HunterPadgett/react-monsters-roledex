@@ -11,7 +11,7 @@ class App extends Component {
   // in react we use the constructor to initilize the state
   this.state = {
    monsters: [],
-   filteredMonArr: [],
+   searchField: "",
   };
  }
 
@@ -34,30 +34,29 @@ class App extends Component {
    );
  }
 
+ onSearchChange = (e) => {
+  const searchField = e.target.value.toLocaleLowerCase();
+  this.setState(() => {
+   return { searchField };
+  });
+ };
+
  //  render runs SECOND. renders and mounts the UI
  render() {
-  const { monsters, filteredMonArr } = this.state;
-  const displayMonsters = filteredMonArr.length ? filteredMonArr : monsters;
+  const { monsters, searchField } = this.state;
+  const { onSearchChange } = this;
+  const filteredMonsters = monsters.filter((monster) => {
+   return monster.name.toLocaleLowerCase().includes(searchField);
+  });
   return (
    <div className="App">
     <input
      className="search-box"
      type="search"
      placeholder="search monsters"
-     onChange={(e) => {
-      console.log(e.target.value);
-      const searchStr = e.target.value.toLocaleLowerCase();
-      const filteredMonsters = this.state.monsters.filter((monster) => {
-       return monster.name.toLocaleLowerCase().includes(searchStr);
-      });
-
-      this.setState(() => {
-       return { filteredMonArr: filteredMonsters };
-      });
-      console.log(this.state);
-     }}
+     onChange={onSearchChange}
     />
-    {displayMonsters.map((monster) => {
+    {filteredMonsters.map((monster) => {
      return (
       <div key={monster.id}>
        <h1>{monster.name}</h1>
