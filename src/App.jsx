@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-// import { useState } from "react";
-import reactLogo from "./assets/react.svg";
+import CardList from "./components/card-list/card-list.component";
 import "./App.css";
 
 class App extends Component {
@@ -34,6 +33,7 @@ class App extends Component {
    );
  }
 
+ //  set logic for searching in a method
  onSearchChange = (e) => {
   const searchField = e.target.value.toLocaleLowerCase();
   this.setState(() => {
@@ -43,11 +43,13 @@ class App extends Component {
 
  //  render runs SECOND. renders and mounts the UI
  render() {
+  // destructure the state and methods to our code more readable
   const { monsters, searchField } = this.state;
   const { onSearchChange } = this;
   const filteredMonsters = monsters.filter((monster) => {
    return monster.name.toLocaleLowerCase().includes(searchField);
   });
+
   return (
    <div className="App">
     <input
@@ -56,13 +58,7 @@ class App extends Component {
      placeholder="search monsters"
      onChange={onSearchChange}
     />
-    {filteredMonsters.map((monster) => {
-     return (
-      <div key={monster.id}>
-       <h1>{monster.name}</h1>
-      </div>
-     );
-    })}
+    <CardList monsters={filteredMonsters} />
    </div>
   );
  }
