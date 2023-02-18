@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
-class cardList extends Component {
+class CardList extends Component {
  render() {
   const { monsters } = this.props;
 
@@ -14,4 +14,4 @@ class cardList extends Component {
  }
 }
 
-export default cardList;
+export default CardList;
