@@ -1,5 +1,6 @@
 import Card from "../card/card.component";
 import "./card-list.styles.css";
+// the CardList component is responsible for rendering a list of Card components
 
 // pass in props, in this case it's the filtered monster array
 const CardList = ({ monsters }) => {
