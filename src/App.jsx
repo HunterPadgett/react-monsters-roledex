@@ -1,68 +1,45 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import CardList from "./components/card-list/card-list.component";
 import SearchBox from "./components/search-box/search-box.component";
 import "./App.css";
 
-class App extends Component {
- constructor() {
-  super();
+const App = () => {
+ const [searchField, setSearchField] = useState("");
+ const [monsters, setMonsters] = useState([]);
+ const [filteredMonsters, setFilteredMonsters] = useState(monsters);
 
-  // constructor always runs FIRST
-  // in react we use the constructor to initilize the state
-  this.state = {
-   monsters: [],
-   searchField: "",
-  };
- }
-
- //  this runs THIRD bc we wait on the API call
- // once we get the fetch we set the state and react rerenders the page with this new data
- // anytime state is changed react rerenders
- componentDidMount() {
+ useEffect(() => {
   fetch("https://jsonplaceholder.typicode.com/users")
    .then((res) => res.json())
-   .then((users) =>
-    this.setState(
-     () => {
-      // tell the monsters array to point to the fetched data
-      return { monsters: users };
-     },
-     () => {
-      // console.log(this.state);
-     }
-    )
-   );
- }
+   .then((users) => setMonsters(users));
+ }, []);
 
- //  set logic for searching in a method
- onSearchChange = (e) => {
-  const searchField = e.target.value.toLocaleLowerCase();
-  this.setState(() => {
-   return { searchField };
-  });
- };
-
- //  render runs SECOND. renders and mounts the UI
- render() {
-  // destructure the state and methods to our code more readable
-  const { monsters, searchField } = this.state;
-  const { onSearchChange } = this;
-  const filteredMonsters = monsters.filter((monster) => {
+ useEffect(() => {
+  const newFilteredMonsters = monsters.filter((monster) => {
    return monster.name.toLocaleLowerCase().includes(searchField);
   });
 
-  return (
-   <div className="App">
-    <h1 className="main-title">React Monsters</h1>
-    <SearchBox
-     className="monsters-search-box"
-     onChangeHandler={onSearchChange}
-     placeholder="search monsters"
-    />
-    <CardList monsters={filteredMonsters} />
-   </div>
-  );
- }
-}
+  setFilteredMonsters(newFilteredMonsters);
+ }, [monsters, searchField]);
+
+ const onSearchChange = (e) => {
+  const searchFieldStr = e.target.value.toLocaleLowerCase();
+  setSearchField(searchFieldStr);
+ };
+
+ //  console.log(monsters)
+
+ return (
+  <div className="App">
+   <h1 className="main-title">React Monsters</h1>
+   <SearchBox
+    className="monsters-search-box"
+    onChangeHandler={onSearchChange}
+    placeholder="search monsters"
+   />
+   <CardList monsters={filteredMonsters} />
+  </div>
+ );
+};
 
 export default App;

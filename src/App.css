@@ -33,3 +33,10 @@ body {
  color: #0ccac4;
  font-family: bigelow rules;
 }
+
+@media (max-width: 767px) {
+ /* CSS rules for mobile devices go here */
+ .main-title {
+  font-size: 6rem;
+ }
+}
