@@ -1,7 +1,10 @@
 import "./card.styles.css";
 
 const Card = ({ monster }) => {
+ // destructure the monster object passed in from card-list-component- get name, id, and email properties
  const { name, id, email } = monster;
+
+ // render a div containing an image, name, and email for a single card
  return (
   <div className="card-container" key={id}>
    <img src={`https://robohash.org/${id}?set=set2`} alt="monster" />
