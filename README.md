@@ -6,7 +6,7 @@
 
 This project is a simple React app built with Vite that displays a list of monsters fetched from a JSONPlaceholder API. The purpose of the project is to help beginners get familiar with the basics of React, components, and hooks. It includes several components, such as the SearchBox, CardList, and Card, and uses useState and useEffect hooks to manage state and side effects. The app demonstrates how to filter and display data, handle user input, and render dynamic components.
 
-Deployed link: ...
+Deployed link: https://react-monsters-hp.netlify.app/
 
 ## Table of Contents
 
