@@ -51,7 +51,7 @@ The **SearchBox** component is passed a onChangeHandler, placeholder, and classN
 
 ## Contribution and Attribution
 
-This project was created by Hunter Padgett and is based on a tutorial from [ZTM](https://zerotomastery.io/)
+This project was created by [Hunter Padgett](https://hunterpadgett.netlify.app/) and is based on a tutorial from [ZTM](https://zerotomastery.io/)
 
 ## Technologies
 
