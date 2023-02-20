@@ -8,7 +8,7 @@ This project is a simple React app built with Vite that displays a list of monst
 
 Deployed link: https://react-monsters-hp.netlify.app/
 
-![react-monsters-hp netlify app_](https://user-images.githubusercontent.com/106113692/220203520-7620b4b9-f282-4cc6-ad8a-57f71c76f053.png)
+![Screenshot_20230220_054144](https://user-images.githubusercontent.com/106113692/220208559-2090ae1a-642c-4a4a-a2e6-491bb430acb8.png)
 
 ## Table of Contents
 
