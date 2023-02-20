@@ -8,9 +8,13 @@ This project is a simple React app built with Vite that displays a list of monst
 
 Deployed link: https://react-monsters-hp.netlify.app/
 
+## For Airbnb Engineering Apprentice Application
+
 Below I have provided images of my codebase for the Airbnb Engineering Apprentice team / Connect team application. The prompt on the application stated: **Provide a link to a sample of code you have written that demonstrates your current coding skills and knowledge of at least one framework. If part of a larger project, highlight the piece of code you are most proud of. If the project is deployed, share a link to your source code**. So I decided to just include images of the entire codebase that I found relevant to the prompt. Enjoy and thanks for viewing!
 
+App.js of my React project with comments explaining how everything connects.
 ![Screenshot_20230220_054502](https://user-images.githubusercontent.com/106113692/220208965-409320c1-1ce8-4762-acff-e96e396613ae.png)
+All of the relevant components.
 ![Screenshot_20230220_054730](https://user-images.githubusercontent.com/106113692/220209055-476fe6f2-1c2b-42a5-bbfb-d3e3a24528c0.png)
 
 ## Table of Contents
