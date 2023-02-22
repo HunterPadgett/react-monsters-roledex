@@ -30,8 +30,8 @@ Folder structure and all of the relevant components that go along with App.jsx.
 ## Installation
 
 To get started with this project, first clone the repository to your desktop and navigate to the project directory:
-`cd Desktop/`
-`git clone https://github.com/HunterPadgett/react-monsters-roledex.git`
+`cd Desktop/` <br/>
+`git clone https://github.com/HunterPadgett/react-monsters-roledex.git` <br/>
 `cd react-monsters-roledex/`
 
 Next, install the dependencies:
