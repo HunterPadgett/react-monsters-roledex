@@ -7,6 +7,8 @@
 React Monsters is a simple React app built with Vite that displays a list of monsters fetched from a JSONPlaceholder API. It serves as a beginner-friendly project to learn the basics of React, components, and hooks. The app includes several components like SearchBox, CardList, and Card, utilizing useState and useEffect hooks for state management and side effects. It showcases filtering and displaying data, handling user input, and rendering dynamic components.
 
 
+![image](https://github.com/HunterPadgett/react-monsters-roledex/assets/106113692/bd7b012f-9544-4245-91bd-1ef401c7e1cd)
+</br>
 App.jsx of my React project with comments explaining how everything connects.
 </br>
 ![Screenshot_20230220_054502](https://user-images.githubusercontent.com/106113692/220208965-409320c1-1ce8-4762-acff-e96e396613ae.png)
